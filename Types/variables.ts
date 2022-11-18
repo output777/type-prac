@@ -11,9 +11,16 @@ numCatLives += 1;
 // numCatLives = "zero";
 
 /** boolean */
-let gameOver: boolean = false;
-gameOver = true;
-// gameOver = "true";
+let done: boolean = false;
+done = true;
+
+
+
+
+
+
+
+done = "true";
 
 
 /** 실제로 변수를 작성할 때는 type inference를 사용하면 된다 

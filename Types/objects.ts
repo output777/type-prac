@@ -16,6 +16,9 @@ function randomCoordinate(): { x: number, y: number } {
   return { x: Math.random(), y: Math.random() }
 }
 
+printName({ first: "Mick", last: "Jagger", age: 473 })
+
+
 
 /**
  * 개체 리터럴은 알려진 속성만 지정할 수 있음
@@ -94,7 +97,8 @@ type SelectPoint = {
   z?: number;
 }
 
-const selectMyPoint: SelectPoint = { x: 1, y: 2, z: 9 };
+const selectMyPoint1: SelectPoint = { x: 1, y: 2, z: 9 };
+const selectMyPoint2: SelectPoint = { x: 1, y: 2 };
 
 
 /**
@@ -114,8 +118,8 @@ const user: User = {
 }
 
 console.log(user.id);
-// user.id = 555;
 
+// user.id = 555;
 
 /**
  * 교차 타입 
@@ -130,11 +134,15 @@ type Colorful = {
   color: string;
 }
 
-type ColorfulCircle = Circle & Colorful;
+type ColorfulCircle = Circle & Colorful 
+  & {
+    size: number;
+  }
 
 const happyFace: ColorfulCircle = {
   radius: 4,
   color: "yellow",
+  size: 50,
 }
 
 

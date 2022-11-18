@@ -2,9 +2,10 @@
  * |을 사용해서 유니온타입을 만들 수 있다
  * 유니온 타입을 이용하면 여러 타입의 값을 가질 수 있다
  */
-let unionAge: number | string = 21;
+let unionAge: number | string | boolean = 21;
 unionAge = 23;
 unionAge = "24";
+unionAge = true;
 
 
 type UnionPoint = {
